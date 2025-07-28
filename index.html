@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarth Aradhye Visiting card | AradhyeTech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url(/newAradhyeTechlogo.png);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat ;
+        }
+
+        header {
+            background-color: #ceaa5b;
+        }
+
+        header img {
+            border-radius: 100px;
+        }
+
+        .logoh {
+            font-family: "Share Tech", sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 5px;
+        }
+        .card{
+            font-family: Poppins, sans-serif;
+            padding: 10%;
+            background-color: transparent;
+            backdrop-filter: blur(20px);
+            margin: 5%;
+            border: #ceaa5b solid 2px;
+            border-radius: 15px;
+            align-content: center;
+            text-align: center;
+        }
+        .card img{
+            border-radius: 20px;
+        }
+        button{
+            border-radius: 15px;
+            padding: 1%;
+            font-weight: 600;
+            transition: 1s ease-out;
+        }
+        button:hover{
+            padding: 2%;
+            background-color: #ceaa5b;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logoh">
+            <img src="/newAradhyeTechlogo.png" alt="Aradhyetech changinging lifes using technology" width="120"
+                height="120">
+            <div class="logotxt">
+                <h1>AradhyeTech</h1>
+                <h4>Change matters</h4>
+            </div>
+        </div>
+    </header>
+    <div class="card">
+        <div class="cont">
+            <img src="/Copy of IMG_0805.JPG" alt="" height="300">
+            <h2>Name: Sarth Aradhye</h2>
+            <h3>Founder & CEO</h3>
+            <h2>Contact number: +91 8652103136</h2>
+            <h2>Email: sartharadhye@aradhyetech.online</h2>
+            <br>
+            <button onclick="toWhatsapp()">Contact via WhatsApp</button>
+        </div>
+    </div>
+    <script>
+        function toWhatsapp(){
+            window.location.href="https://wa.me/918652103136"
+        }
+    </script>
+</body>
+
+</html>
