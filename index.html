@@ -5,63 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sarth Aradhye Visiting card | AradhyeTech</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-image: url(/newAradhyeTechlogo.png);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        header {
-            background-color: #ceaa5b;
-        }
-
-        header img {
-            border-radius: 100px;
-        }
-
-        .logoh {
-            font-family: "Share Tech", sans-serif;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 5px;
-        }
-
-        .card {
-            font-family: Poppins, sans-serif;
-            padding: 10%;
-            background-color: transparent;
-            backdrop-filter: blur(20px);
-            margin: 5%;
-            border: #ceaa5b solid 2px;
-            border-radius: 15px;
-            align-content: center;
-            text-align: center;
-        }
-
-        .card img {
-            border-radius: 20px;
-        }
-
-        button {
-            border-radius: 15px;
-            padding: 1%;
-            font-weight: 600;
-            transition: 1s ease-out;
-        }
-
-        button:hover {
-            padding: 2%;
-            background-color: #ceaa5b;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/AradhyeTechLogo.png" type="image/x-icon">
 </head>
 
 <body>
@@ -74,61 +19,43 @@
                 <h4>Change matters</h4>
             </div>
         </div>
+        <button id="tr">genZ visiting Card</button>
     </header>
-    <div class="card">
-        <div class="cont">
-            <a href="https://aradhyetech.online"><h1>AradhyeTech new website is live now!</h1></a>
-            <img src="/Copy of IMG_0805.JPG" alt="" height="300">
-            <h2>Name: Sarth Aradhye</h2>
-            <h3>Founder & CEO</h3>
-            <h2>Contact number: +91 8652103136</h2>
-            <h2>Email: sartharadhye@aradhyetech.online</h2>
-            <br>
-            <button onclick="toWhatsapp()">Contact via WhatsApp</button>
-            <a href="contact.vcf" download>
-              <button>Add Contact</button>
-            </a>
-            <a href="https://www.linkedin.com/in/sarth-aaradhye"><button>LinkedIn page</button></a>
+    <div class="bodypart">
+        <div class="cornertxt">
+
         </div>
+        <div class="card">
+            <div class="cardCont">
+                <a href="https://aradhyetech.online">AradhyeTech new website is out</a>
+                <div class="cardhead">
+                    <h1>Hey! This Sarth Aradhye! Hope you had a great day</h1>
+                </div>
+                <img src="/Copy of IMG_0805.JPG" alt="Image of Sarth Aradhye">
+                <h2>Founder and CEO</h2>
+                <p>AradhyeTech</p>
+                <h3><a href="https://wa.me/+918652103136">M. 8652103136</a></h3>
+                <h3>Email.: sartharadhye@aradhyetech.online</h3>
+                <h3>Sion, Mumbai</h3>
+                <div class="btns">
+                    <button>Click here for Socials</button>
+                    <button onclick="toWhatsapp()">Chat Via Whatsapp</button>
+                    <button onclick="contactCard()">Add to Contacts</button>
+                </div>
+                <h4>We provide software services of Mobile app development, web development, cutomized software and much
+                    more.</h4>
+            </div>
+
+        </div>
+
     </div>
     <script>
         function toWhatsapp() {
             window.location.href = "https://wa.me/918652103136"
         }
-        function getNext7PM() {
-            const now = new Date();
-            const next7PM = new Date();
-
-            next7PM.setHours(21, 30, 0, 0); // Set to 7:00:00.000 PM
-
-            if (now >= next7PM) {
-                // If it’s already past 7 PM today, set to 7 PM tomorrow
-                next7PM.setDate(next7PM.getDate() + 1);
-            }
-
-            return next7PM;
+        function contactCard(){
+            window.location.href = "/contact.vcf"
         }
-
-        function updateCountdown() {
-            const now = new Date();
-            const end = getNext7PM();
-            const diff = end - now;
-
-            if (diff <= 0) {
-                document.getElementById("timer").textContent = "00:00:00";
-                return;
-            }
-
-            const hours = String(Math.floor(diff / (1000 * 60 * 60))).padStart(2, '0');
-            const minutes = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
-            const seconds = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
-
-            document.getElementById("timer").textContent = `${hours}:${minutes}:${seconds}`;
-        }
-
-        // Update every second
-        setInterval(updateCountdown, 1000);
-        updateCountdown(); // initial call
     </script>
 </body>
 
