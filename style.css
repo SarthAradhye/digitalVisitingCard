@@ -3,6 +3,7 @@
     --yellowish:#fca311;
     --metalicGold:#d4af37;
     --cardClr:#e5e5e5;
+    --yelowishGlass:#fca2119e;
 }
 
 body{
@@ -77,6 +78,25 @@ button{
 .btns{
     display: grid;
     gap: 5px;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    background-color: var(--yellowish);
+}
+.social{
+    display: flex;
+    gap: 20px;
+}
+.socialIcon{
+    display: grid;
+    justify-items: center;
+}
+.socialIcon img{
+    width: 50px;
+    height: 50px;
 }
 @font-face {
     font-family: Panton;
